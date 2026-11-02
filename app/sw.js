@@ -2,7 +2,7 @@
    Everything the app needs is a handful of files (the page carries its libraries and fonts inside), so all of them are cached
    on install and served from the cache, with or without a network. A new build has a new CACHE name: it installs beside the
    running one and waits until the page asks it to take over (the "Reload" notice), then deletes the old cache. */
-const CACHE = 'retirement-app-Demo_3.9-0c4975e2bd';
+const CACHE = 'retirement-app-Demo_3.10-3719aa6250';
 const FILES = ["index.html", "manifest.webmanifest", "icons/apple-touch-icon.png", "icons/favicon-32.png", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png"];  // the page is cached once, as index.html, and answers every navigation
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES))); });
 self.addEventListener('activate', e => {
